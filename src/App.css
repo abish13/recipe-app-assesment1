@@ -1,0 +1,525 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+.app.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+
+.recipe-card {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 40px;
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recipe-card:hover .recipe-details {
+  opacity: 1;
+}
+
+.recipe-details {
+  display: none;
+  transition: opacity 0.3s ease;
+  text-align: left;
+  margin-top: 15px;
+}
+
+
+.recipe-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+}
+
+.modal-content {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 350px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.recipe-img-large {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-section {
+  width: 30%;
+  text-align: center;
+}
+
+.food-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #39b571;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-image: fixed;
+}
+
+button:hover {
+  background-color: #c5d3e2;
+}
+
+
+.app.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+.header {
+  background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 30px 360px; 
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.header-content {
+  z-index: 1; 
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.app-logo {
+  height: 50px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.hero-section {
+  text-align: center;
+  margin: 30px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  
+}
+
+.search-container input {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  padding: 10px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.recipe-card:hover {
+  transform: scale(1.1);
+}
+.recipe-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.favorite-btn {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.favorite-btn.favorited {
+  background-color: #ff6347;
+  color: white;
+  border-color: #ff6347;
+}
+
+.load-more {
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 2px solid #ddd;
+}
+
+.footer h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vegetable-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.vegetable-image img:hover {
+  transform: scale(1.1);
+}
+
+.vegetables-list {
+  flex: 1;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.vegetables-list ul {
+  list-style-type: none;
+  font-size: 18px;
+  color: #555;
+}
+
+.vegetables-list li {
+  margin: 10px ;
+  padding: 5px ;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.vegetables-list li:hover {
+  color: #fff;
+  background-color: #4CAF50;
+}
+
+.vegetables-list li:nth-child(odd):hover {
+  background-color: #FF5722;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 2px solid #ddd;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.footer-text p {
+  margin: 0;
+  padding: 10px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.food-section1 {
+  flex: 1;
+  max-width: 300px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.food-section h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.food-item {
+  position: relative;
+}
+
+.food-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-item img:hover {
+  transform: scale(1.1);
+}
+
+.food-item button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.food-item button:hover {
+  background-color: #45a049;
+}
+
+
+.logos-wrapper {
+  display: flex;
+  overflow-x: hidden; 
+  width: 100%;
+  padding:20px;
+  margin-right: -1100px;
+}
+h3{
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+
+.logos {
+  display: flex;
+  animation: scroll 20s linear infinite; 
+}
+
+.logos img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px; 
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Start the logos off the screen from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move them off the screen to the left */
+  }
+}
+
+
+
+
+
+
+.foter {
+  background-color: #222;
+  color: #fff;
+  padding: 0px 170px;
+  text-align: left;
+  height:500px;
+}
+
+
+.f1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.ff1 {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.ff1 h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.ff1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ff1 li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.ff1 li:hover {
+  color: #f39c12;
+}
+
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #f39c12;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
